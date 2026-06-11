@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="s-section bgimage">
+    <div id="maindiv">
+
+      <div class="max-width">
+        <nav id="navbar-laptop">
+          <a href="#home" class="navitem">Home</a>
+          <a href="#about" class="navitem">About</a>
+          <a href="#skills" class="navitem">Skills</a>
+          <a href="#projects" class="navitem">Projects</a>
+          <a href="#blogs" class="navitem">Blogs</a>
+        </nav>
+
+        <nav id="navbar-mobile">
+          <a id="portfolio">PORTFOLIO</a>
+          <button class="butn1" id="menu-open-btn">
+            <svg viewBox="0 0 24 24" height="24px" width="24px">
+              <path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z" fill="white"></path>
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+      <div id="mobile-menu" class="hidden">
+        <div id="navbar-mini">
+          <a id="portfolio-mini">PORTFOLIO</a>
+          <button class="butn1" id="menu-close-btn">
+            <svg viewBox="0 0 24 24" height="24px" width="24px">
+              <path d="M19 6.4l-1.4-1.4-5.6 5.6-5.6-5.6-1.4 1.4 5.6 5.6-5.6 5.6 1.4 1.4 5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6z" fill="#ffffff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul>
+          <li><a href="#home" class="navitem">Home</a></li>
+          <li><a href="#about" class="navitem">About</a></li>
+          <li><a href="#skills" class="navitem">Skills</a></li>
+          <li><a href="#projects" class="navitem">Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="max-width">
+        <section id="home">
+          <div class="intro-main-laptop">
+            <div id="intro-laptop">
+              <div>
+                <div class="intro-text">Hii</div>
+                <div class="intro-text-large">I'm Yash</div>
+                <div class="intro-text-large">a <span class="highlight-text">Web Designer</span></div>
+                <p class="intro-paragraph">
+                  Hello! My name is Yash Kundu, and I’m a web developer with a passion for building clean, responsive, and user-friendly websites. I work with HTML, CSS, JavaScript, and modern tools to create websites that not only look good but also perform well.
+                </p>
+                <div id="buttons-laptop">
+                  <button type="button" class="button1">Hire Me</button>
+                  <a href="https://wa.me/8396033600"><button type="button" class="button2">Contact Me</button></a>
+                </div>
+              </div>
+              <div id="pic-laptop">
+                <img id="image-laptop" src="IMG_E0058[1].JPG" alt="Yash Kundu">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about">
+          <h1 class="section-title">About Me</h1>
+          <p class="about-paragraph">
+            Hey there! I’m Yash Kundu, a web developer. I started learning web development out of curiosity, and over time, it became something I genuinely love doing. I work mainly with HTML, CSS, and JavaScript — building everything from basic landing pages to full websites that are clean, smooth, and mobile-friendly.
+          </p>
+        </section>
+
+        <section id="skills">
+          <h1 class="section-title">Skills</h1>
+          <div class="heading">CRAZY FRONTEND DEVELOPER WHO WANTS TO EXPLORE</div>
+          <div class="skilled">
+            <div class="skill-item"><i class="fa-brands fa-square-js"></i><div class="language">JavaScript</div></div>
+            <div class="skill-item"><i class="fa-brands fa-html5"></i><div class="language">HTML</div></div>
+            <div class="skill-item"><i class="fa-brands fa-css3-alt"></i><div class="language">CSS</div></div>
+            <div class="skill-item"><img class="designing" src="adobe-photoshop-logo.png" alt="Photoshop"><div class="language">Photoshop</div></div>
+            <div class="skill-item"><i class="fa-brands fa-java" style="color: #ffffff;"></i><div class="language">Java</div></div>
+            <div class="skill-item"><i class="fa-solid fa-c" style="color: #ffffff;"></i><div class="language">C#</div></div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h1 class="section-title">Project</h1>
+          <div class="heading">SOME OF MY RECENT WORK</div>
+          <div class="project-container">
+            <div class="project-div">
+              <div class="project-image-wrapper">
+                <img class="project-img1" src="rb.png" alt="Project Rajni Bhasin">
+                <img class="project-img2" src="logo.png" alt="Project Logo">
+              </div>
+              <h1 class="project-name">Rajni Bhasin</h1>
+              <p class="project-title">This website provides career guidance for students and professionals</p>
+              <a href="https://rajnibhasin.in/"><button class="project-btn">View Project</button></a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="footer-content max-width">
+          <h2 class="footer-logo">Yash<span>Kundu</span></h2>
+          <p>© 2025 Yash Kundu. Built with ❤️ using HTML & CSS.</p>
+        </div>
+      </footer>
+
+      <button id="topbtn"><i class="fa-solid fa-circle-up"></i></button>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    // Vanta Initialisation
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.VANTA) {
+        window.VANTA.NET({
+          el: ".s-section",
+          mouseControls: true,
+          touchControls: true,
+          color: 0xc5a4a4,
+          backgroundColor: 0x0e0e0e,
+          points: 8.00,
+          maxDistance: 22.00,
+          spacing: 17.00
+        });
+      }
+
+      // Mobile Menu Logic
+      const menuOpenBtn = document.getElementById('menu-open-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuOpenBtn.onclick = () => mobileMenu.classList.remove('hidden');
+      menuCloseBtn.onclick = () => mobileMenu.classList.add('hidden');
+      document.querySelectorAll('#mobile-menu .navitem').forEach(item => {
+        item.onclick = () => mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
