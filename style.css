@@ -84,14 +84,12 @@ img {
 }
 
 .brand-mark {
-  width: 42px;
+  width: wrap-content;
   height: 42px;
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(255, 167, 167, 0.22), rgba(255, 167, 167, 0.06));
-  border: 1px solid rgba(255, 167, 167, 0.24);
-  color: var(--accent);
+  color: white;
 }
 
 .desktop-nav {
