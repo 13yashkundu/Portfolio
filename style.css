@@ -377,6 +377,7 @@ img {
   font-size: 1.02rem;
 }
 .skills-grid {
+  width: 900px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 20px;
@@ -603,9 +604,19 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+    .skills-grid {
+      max-width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    .skill-card {
+      height: 120px;
+    }
+  
+    .skill-card i {
+      font-size: 32px;
+    }
 
   .hero-visual {
     min-height: 360px;
