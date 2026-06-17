@@ -608,6 +608,7 @@ img {
       max-width: 100%;
       grid-template-columns: repeat(2, 1fr);
       gap: 15px;
+      padding: 0 10px;
     }
   
     .skill-card {
