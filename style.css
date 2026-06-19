@@ -469,8 +469,8 @@ img {
   transition: .4s;
 }
 
-.project-card:hover .project-image img {
-  transform: scale(1.05);
+.project-card:hover  {
+  transform: scale(1.03);
 }
 
 .project-content {
