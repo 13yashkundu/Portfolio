@@ -84,7 +84,7 @@ img {
 }
 
 .brand-mark {
-  width: wrap-content;
+  width: auto;
   height: 42px;
   border-radius: 14px;
   display: grid;
@@ -376,13 +376,14 @@ img {
   line-height: 1.8;
   font-size: 1.02rem;
 }
+
 .skills-grid {
-    max-width: 850px;
-      margin: 50px auto 0;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      justify-content: center;
+  max-width: 850px;
+  /* margin: 50px auto 0; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
 }
 
 .skill-card {
@@ -412,6 +413,7 @@ img {
   font-size: 15px;
   color: white;
 }
+
 .skill-card:hover {
   transform: translateY(-5px);
   border-color: rgb(255, 167, 167);
@@ -435,6 +437,10 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
   margin-top: 50px;
+}
+
+.projects-grid .project-card {
+  max-width: 420px;
 }
 
 .project-card {
@@ -585,20 +591,20 @@ img {
     grid-template-columns: 1fr;
   }
 
-    .skills-grid {
-      max-width: 100%;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 0 10px;
-    }
-  
-    .skill-card {
-      height: 120px;
-    }
-  
-    .skill-card i {
-      font-size: 32px;
-    }
+  .skills-grid {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .skill-card {
+    height: 120px;
+  }
+
+  .skill-card i {
+    font-size: 32px;
+  }
 
   .hero-visual {
     min-height: 360px;
