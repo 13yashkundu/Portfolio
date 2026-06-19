@@ -431,79 +431,61 @@ img {
 }
 
 .projects-grid {
+  margin-top: 40px;
+
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .project-card {
-  overflow: hidden;
-  border-radius: 26px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
+  padding: 24px;
 
-.project-card.featured {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-}
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 167, 167, .15);
 
-.project-media {
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.project-media.image-tile {
-  aspect-ratio: 1.45 / 1;
-  display: grid;
-  place-items: center;
-}
-
-.project-media.image-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   border-radius: 18px;
+
+  transition: .3s ease;
 }
 
-.project-logo.small-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 16px;
+.project-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgb(255, 167, 167);
+
+  box-shadow: 0 0 20px rgba(255, 167, 167, .15);
 }
 
-.project-banner {
-  width: 100%;
-  max-height: 150px;
-  object-fit: contain;
-  background: #fff;
-  border-radius: 18px;
-  padding: 16px;
-}
-
-.project-body {
-  padding: 22px;
-}
-
-.project-body h4 {
+.project-card h4 {
   margin: 0 0 10px;
-  font-size: 1.22rem;
+  font-size: 20px;
 }
 
-.project-body p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.7;
+.project-card p {
+  color: #bdbdbd;
+  margin-bottom: 18px;
 }
 
-.project-link {
-  display: inline-flex;
-  margin-top: 16px;
-  color: var(--accent);
-  font-weight: 700;
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.project-tech span {
+  font-size: 13px;
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, .06);
+}
+
+.project-card a {
+  color: rgb(255, 167, 167);
+  font-weight: 600;
 }
 
 .contact-panel {
