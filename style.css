@@ -469,7 +469,7 @@ img {
   transition: .4s;
 }
 
-.project-card:hover  {
+.project-card:hover {
   transform: scale(1.03);
 }
 
@@ -496,13 +496,68 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
-.contact-panel p {
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.contact-lead {
+  margin: 0;
   color: var(--muted);
   line-height: 1.7;
-  margin-bottom: 0;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-size: 0.96rem;
+  min-width: 0;
+}
+
+a.contact-item {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a.contact-item:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+.contact-item span:last-child {
+  overflow-wrap: anywhere;
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: rgba(255, 167, 167, 0.12);
+  border: 1px solid rgba(255, 167, 167, 0.25);
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.contact-cta {
+  flex-shrink: 0;
+  gap: 8px;
 }
 
 /* ============ Footer ============ */
@@ -547,10 +602,19 @@ img {
   }
 
   .hero-grid,
-  .project-card.featured,
-  .contact-panel {
+  .project-card.featured {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .contact-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-cta {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero-visual {
@@ -624,6 +688,20 @@ img {
   .contact-panel {
     padding: 20px;
     border-radius: 22px;
+  }
+
+  .contact-info {
+    flex: 1 1 100%;
+  }
+
+  .contact-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
   }
 
   .project-body {
