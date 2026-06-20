@@ -375,11 +375,11 @@ img {
   color: var(--muted);
   line-height: 1.8;
   font-size: 1.02rem;
+  margin-left: 50px;
 }
 
 .skills-grid {
-  max-width: 850px;
-  margin: 35px auto 0;
+  margin-left: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
