@@ -29,7 +29,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeDrawer();
 });
 
-// simple back-to-top behavior for the button-link style footer arrow
 document.querySelectorAll('a[href="#home"]').forEach(link => {
   link.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 });
