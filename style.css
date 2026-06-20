@@ -494,70 +494,74 @@ img {
 
 .contact-panel {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-
-.contact-info {
-  display: flex;
   flex-direction: column;
-  gap: 18px;
-  flex: 1 1 320px;
-  min-width: 0;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  padding: 48px 40px;
 }
 
 .contact-lead {
   margin: 0;
+  max-width: 56ch;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.75;
+  font-size: 1.04rem;
 }
 
-.contact-list {
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.contact-method {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.contact-item {
-  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  padding: 22px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 167, 167, 0.15);
   color: var(--text);
-  font-size: 0.96rem;
   min-width: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-a.contact-item {
-  transition: color 0.2s ease, transform 0.2s ease;
+a.contact-method:hover {
+  transform: translateY(-4px);
+  border-color: rgb(255, 167, 167);
+  box-shadow: 0 10px 24px rgba(255, 167, 167, 0.15);
 }
 
-a.contact-item:hover {
-  color: var(--accent);
-  transform: translateX(2px);
+.contact-method strong {
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
 }
 
-.contact-item span:last-child {
+.contact-method-value {
+  font-size: 0.85rem;
+  color: var(--muted);
   overflow-wrap: anywhere;
 }
 
 .contact-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
   flex-shrink: 0;
   background: rgba(255, 167, 167, 0.12);
   border: 1px solid rgba(255, 167, 167, 0.25);
   color: var(--accent);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .contact-cta {
-  flex-shrink: 0;
-  gap: 8px;
+  min-width: 220px;
 }
 
 /* ============ Footer ============ */
@@ -607,14 +611,8 @@ a.contact-item:hover {
     display: grid;
   }
 
-  .contact-panel {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .contact-cta {
-    width: 100%;
-    justify-content: center;
+  .contact-methods {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-visual {
@@ -686,22 +684,22 @@ a.contact-item:hover {
 
   .about-panel,
   .contact-panel {
-    padding: 20px;
+    padding: 24px 20px;
     border-radius: 22px;
   }
 
-  .contact-info {
-    flex: 1 1 100%;
+  .contact-methods {
+    grid-template-columns: 1fr;
   }
 
   .contact-icon {
-    width: 34px;
-    height: 34px;
-    font-size: 0.9rem;
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
   }
 
-  .contact-item {
-    font-size: 0.9rem;
+  .contact-cta {
+    width: 100%;
   }
 
   .project-body {
