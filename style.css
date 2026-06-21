@@ -208,8 +208,24 @@ img {
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
+  grid-template-areas:
+    "heading visual"
+    "body    visual";
+  column-gap: 40px;
+  row-gap: 0;
   align-items: center;
+}
+
+.hero-heading {
+  grid-area: heading;
+}
+
+.hero-body {
+  grid-area: body;
+}
+
+.hero-visual {
+  grid-area: visual;
 }
 
 .eyebrow,
@@ -221,13 +237,13 @@ img {
   margin: 0 0 14px;
 }
 
-.hero-copy h1 {
+.hero-heading h1 {
   margin: 0;
   font-size: clamp(2.6rem, 7vw, 5.2rem);
   line-height: 0.96;
 }
 
-.hero-copy h2 {
+.hero-heading h2 {
   margin: 18px 0 0;
   font-size: clamp(1.35rem, 2.7vw, 2.3rem);
   line-height: 1.15;
@@ -586,10 +602,19 @@ a.contact-method:hover {
     display: inline-flex;
   }
 
-  .hero-grid,
   .project-card.featured {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 96px;
+    grid-template-areas:
+      "heading visual"
+      "body    body";
+    column-gap: 16px;
+    row-gap: 14px;
+    align-items: center;
   }
 
   .contact-methods {
@@ -597,7 +622,19 @@ a.contact-method:hover {
   }
 
   .hero-visual {
-    min-height: 440px;
+    min-height: 0;
+  }
+
+  .portrait-frame {
+    width: 96px;
+    aspect-ratio: 1 / 1;
+    padding: 4px;
+    border-radius: 18px;
+    transform: none;
+  }
+
+  .portrait {
+    border-radius: 14px;
   }
 
   .skills-grid {
@@ -649,8 +686,24 @@ a.contact-method:hover {
     font-size: 32px;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr 72px;
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+
   .hero-visual {
-    min-height: 360px;
+    min-height: 0;
+  }
+
+  .portrait-frame {
+    width: 72px;
+    padding: 3px;
+    border-radius: 14px;
+  }
+
+  .portrait {
+    border-radius: 11px;
   }
 
   .floating-a {
