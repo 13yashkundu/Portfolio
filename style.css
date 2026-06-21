@@ -620,7 +620,7 @@ a.contact-method:hover {
   }
 
   .hero-grid {
-    grid-template-columns: 1fr 180px;
+    grid-template-columns: 1fr 250px;
     grid-template-areas:
       "heading heading"
       "subhead visual"
@@ -635,7 +635,7 @@ a.contact-method:hover {
   }
 
   .portrait-frame {
-    width: 180px;
+    width: 250px;
     aspect-ratio: 1 / 1;
     padding: 5px;
     border-radius: 22px;
