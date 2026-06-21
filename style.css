@@ -375,11 +375,9 @@ img {
   color: var(--muted);
   line-height: 1.8;
   font-size: 1.02rem;
-  margin-left: 50px;
 }
 
 .skills-grid {
-  margin-left: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -420,23 +418,10 @@ img {
   box-shadow: 0 0 20px rgba(255, 167, 167, 0.25);
 }
 
-.image-card {
-  justify-content: center;
-  gap: 14px;
-  margin: 20px 50px;
-}
-
-.image-card img {
-  width: 72px;
-  height: 72px;
-  object-fit: contain;
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
-  margin-left: 50px;
 }
 
 .projects-grid .project-card {
