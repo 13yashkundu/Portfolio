@@ -67,7 +67,7 @@
 
           <div class="hero-visual">
             <div class="portrait-frame">
-              <img src="me.png" alt="Image" class="portrait" />
+              <img src="me.png" alt="Portrait of Yash Kundu" class="portrait" />
             </div>
           </div>
 
@@ -183,7 +183,7 @@
 
                 <p>Career Guidance Platform</p>
 
-                <a href="https://rajnibhasin.in/" target="_blank" class="project-link">
+                <a href="https://rajnibhasin.in/" target="_blank" rel="noopener noreferrer" class="project-link">
                   View Project →
                 </a>
 
@@ -217,7 +217,7 @@
                 </span>
               </a>
 
-              <a href="https://wa.me/+918396033600" target="_blank" rel="noreferrer" class="contact-method">
+              <a href="https://wa.me/+918396033600" target="_blank" rel="noopener noreferrer" class="contact-method">
                 <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
                 <span class="contact-text">
                   <strong>WhatsApp</strong>
@@ -225,7 +225,7 @@
                 </span>
               </a>
 
-              <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noreferrer"
+              <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noopener noreferrer"
                 class="contact-method">
                 <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
                 <span class="contact-text">
@@ -234,7 +234,7 @@
                 </span>
               </a>
 
-              <a href="https://github.com/13yashkundu" target="_blank" rel="noreferrer" class="contact-method">
+              <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer" class="contact-method">
                 <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
                 <span class="contact-text">
                   <strong>GitHub</strong>
@@ -251,7 +251,7 @@
       <div class="container footer-inner">
         <div>
           <strong>Yash<span class="accent">Kundu</span></strong>
-          <p>© 2025 • Built with HTML, CSS and JavaScript.</p>
+          <p>© <span id="year"></span> • Built with HTML, CSS and JavaScript.</p>
         </div>
         <a class="back-top" href="#home" aria-label="Back to top">↑</a>
       </div>
@@ -259,6 +259,9 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>

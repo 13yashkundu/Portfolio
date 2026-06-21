@@ -297,32 +297,6 @@ img {
   color: var(--text);
 }
 
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.stat-card {
-  padding: 16px;
-  border-radius: var(--radius-sm);
-  background: var(--panel);
-  border: 1px solid var(--border);
-}
-
-.stat-card strong {
-  display: block;
-  font-size: 0.98rem;
-  margin-bottom: 4px;
-}
-
-.stat-card span {
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.45;
-}
-
 .hero-visual {
   position: relative;
   min-height: 560px;
@@ -347,27 +321,6 @@ img {
   border-radius: 28px;
   object-fit: cover;
   object-position: center top;
-}
-
-.floating-card {
-  position: absolute;
-  padding: 12px 16px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 167, 167, 0.22);
-  backdrop-filter: blur(10px);
-}
-
-.floating-a {
-  top: 72px;
-  left: 12px;
-}
-
-.floating-b {
-  bottom: 88px;
-  right: 10px;
 }
 
 /* ============ Sections ============ */
@@ -415,11 +368,6 @@ img {
   border: 1px solid rgba(255, 167, 167, 0.15);
   border-radius: 18px;
   transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  border-color: rgb(255, 167, 167);
 }
 
 .skill-card i {
@@ -475,7 +423,7 @@ img {
   transition: .4s;
 }
 
-.project-card:hover {
+.project-card:hover .project-image img {
   transform: scale(1.03);
 }
 
@@ -691,10 +639,6 @@ a.contact-method:hover {
     padding-top: 40px;
   }
 
-  .hero-stats {
-    grid-template-columns: 1fr;
-  }
-
   .skills-grid {
     max-width: 100%;
     grid-template-columns: repeat(2, 1fr);
@@ -730,16 +674,6 @@ a.contact-method:hover {
     border-radius: 14px;
   }
 
-  .floating-a {
-    top: 20px;
-    left: 0;
-  }
-
-  .floating-b {
-    bottom: 20px;
-    right: 0;
-  }
-
   .about-panel,
   .contact-panel {
     padding: 24px 20px;
@@ -770,7 +704,7 @@ a.contact-method:hover {
     font-size: 0.78rem;
   }
 
-  .project-body {
+  .project-content {
     padding: 18px;
   }
 
