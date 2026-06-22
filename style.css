@@ -535,6 +535,7 @@ a.contact-method:hover {
   border-top: 1px solid rgba(255, 255, 255, .08);
 
   background: rgba(255, 255, 255, .02);
+  position: relative;
 }
 
 .footer-inner {
@@ -607,6 +608,11 @@ a.contact-method:hover {
 }
 
 .back-top {
+  position: absolute;
+
+  right: 40px;
+  bottom: 95px;
+
   width: 52px;
   height: 52px;
 
@@ -627,7 +633,9 @@ a.contact-method:hover {
 
 .back-top:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(255, 167, 167, .18);
+
+  box-shadow:
+    0 0 20px rgba(255, 167, 167, .18);
 }
 
 /* ============ Responsive ============ */
