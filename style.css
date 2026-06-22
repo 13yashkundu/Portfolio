@@ -111,24 +111,28 @@ img {
 
 .menu-btn {
   display: none;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.04);
+  width: 52px;
+  height: 52px;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 167, 167, .18);
+  backdrop-filter: blur(12px);
+
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  padding: 0;
+
   cursor: pointer;
+
+  transition: .3s;
 }
 
 .menu-btn span {
   display: block;
-  width: 18px;
+  width: 22px;
   height: 2px;
+  background: var(--accent);
   border-radius: 999px;
-  background: white;
 }
 
 .close-btn {
