@@ -458,7 +458,7 @@ img {
   align-items: center;
   gap: 32px;
   text-align: center;
-  padding: 48px 40px;
+  padding: 56px 48px;
 }
 
 .contact-lead {
@@ -471,17 +471,18 @@ img {
 
 .contact-methods {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
   width: 100%;
+  max-width: 640px;
 }
 
 .contact-method {
   display: flex;
   align-items: center;
   text-align: left;
-  gap: 14px;
-  padding: 16px 18px;
+  gap: 16px;
+  padding: 22px 22px;
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 167, 167, 0.15);
@@ -499,24 +500,24 @@ a.contact-method:hover {
 .contact-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   min-width: 0;
 }
 
 .contact-method strong {
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   letter-spacing: 0.02em;
 }
 
 .contact-method-value {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--muted);
   overflow-wrap: anywhere;
 }
 
 .contact-icon {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -524,7 +525,7 @@ a.contact-method:hover {
   background: rgba(255, 167, 167, 0.12);
   border: 1px solid rgba(255, 167, 167, 0.25);
   color: var(--accent);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 /* ============ Footer ============ */
@@ -692,10 +693,6 @@ a.contact-method:hover {
     grid-column: span 1;
   }
 
-  .contact-methods {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .contact-method {
     padding: 12px 14px;
     gap: 10px;
@@ -767,7 +764,6 @@ a.contact-method:hover {
   }
 
   .contact-methods {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
 
