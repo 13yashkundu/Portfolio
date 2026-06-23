@@ -459,6 +459,7 @@ img {
   gap: 32px;
   text-align: center;
   padding: 56px 48px;
+  max-width: 940px;
 }
 
 .contact-lead {
