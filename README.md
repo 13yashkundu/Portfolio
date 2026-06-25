@@ -32,6 +32,8 @@ No build steps are required unless you add tooling later.
 
 ## Screenshots (SS)
 
+![Website Screenshot](SS.jpeg)
+
 ## Contact
 
 Created by 13yashkundu — feel free to reach out on GitHub: https://github.com/13yashkundu
