@@ -32,7 +32,7 @@ No build steps are required unless you add tooling later.
 
 ## Screenshots (SS)
 
-<img src="SS.jpeg" alt="Website Screenshot" width="600" height="400">
+<img src="SS.jpeg" alt="Website Screenshot" width="200" height="410">
 
 ## Contact
 
