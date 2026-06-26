@@ -26,9 +26,13 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-  background: var(--bg);
 }
 
+.shade{
+  height: wrap-content;
+  width: 100%;
+background: rgba(0, 0, 0, 0.808);
+}
 .vanta-bg {
   position: fixed;
   inset: 0;
