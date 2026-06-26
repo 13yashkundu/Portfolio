@@ -388,7 +388,7 @@ img {
 
 .skill-card i {
   font-size: 42px;
-  color: white;
+  color: rgb(255, 167, 167);
   margin-bottom: 12px;
 }
 
@@ -401,6 +401,10 @@ img {
   transform: translateY(-5px);
   border-color: rgb(255, 167, 167);
   box-shadow: 0 0 20px rgba(255, 167, 167, 0.25);
+}
+
+.skill-card:hover i {
+  color:white;
 }
 
 .projects-grid {
