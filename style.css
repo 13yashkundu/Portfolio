@@ -31,7 +31,7 @@ body {
 .shade{
   height: wrap-content;
   width: 100%;
-background: rgba(0, 0, 0, 0.808);
+background: rgba(0, 0, 0, 0.308);
 }
 .vanta-bg {
   position: fixed;
