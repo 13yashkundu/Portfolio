@@ -26,10 +26,16 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 10% 10%, rgba(255, 167, 167, 0.18), transparent 24%),
-    radial-gradient(circle at 90% 20%, rgba(255, 167, 167, 0.12), transparent 24%),
-    linear-gradient(180deg, #111118 0%, #09090d 100%);
+  background: var(--bg);
+}
+
+.vanta-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 a {
@@ -459,7 +465,6 @@ img {
   gap: 32px;
   text-align: center;
   padding: 56px 48px;
-  max-width: 940px;
 }
 
 .contact-lead {
@@ -475,7 +480,7 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   width: 100%;
-  max-width: 640px;
+  max-width: 480px;
 }
 
 .contact-method {
