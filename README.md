@@ -16,9 +16,9 @@ Open `index.html` in a browser to view the site locally or deploy to GitHub Page
 
 ## Technologies
 
-- CSS (54.8%)
-- HTML (40.6%)
-- JavaScript (4.6%)
+- CSS 
+- HTML
+- JavaScript
 
 ## Installation / Local setup
 
@@ -28,7 +28,7 @@ Open `index.html` in a browser to view the site locally or deploy to GitHub Page
 
 2. Open `index.html` in your browser.
 
-No build steps are required unless you add tooling later.
+No build steps are required.
 
 ## Screenshots (SS)
 
