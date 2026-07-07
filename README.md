@@ -34,6 +34,3 @@ No build steps are required.
 
 <img src="SS.jpeg" alt="Website Screenshot" width="200" height="410">
 
-## Contact
-
-Created by 13yashkundu — feel free to reach out on GitHub: https://github.com/13yashkundu
