@@ -28,12 +28,11 @@ body {
   color: var(--text);
 }
 
-.shade {
+.shade{
   height: wrap-content;
   width: 100%;
-  background: rgba(0, 0, 0, 0.541);
+background: rgba(0, 0, 0, 0.541);
 }
-
 .vanta-bg {
   position: fixed;
   inset: 0;
@@ -405,7 +404,7 @@ img {
 }
 
 .skill-card:hover i {
-  color: white;
+  color:white;
 }
 
 .projects-grid {
