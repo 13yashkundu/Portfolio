@@ -12,278 +12,296 @@
 
 <body>
   <div class="shade">
-  <div class="vanta-bg s-section"></div>
+    <div class="vanta-bg s-section"></div>
 
-  <div class="page-shell">
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <a class="brand" href="#home" aria-label="Go to home">
-          <span class="brand-mark">Yash Kundu</span>
-        </a>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="container topbar-inner">
+          <a class="brand" href="#home" aria-label="Go to home">
+            <span class="brand-mark">Yash Kundu</span>
+          </a>
 
-        <nav class="desktop-nav" aria-label="Primary">
+          <nav class="desktop-nav" aria-label="Primary">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <button class="menu-btn" id="menuOpen" aria-label="Open menu" aria-expanded="false"
+            aria-controls="mobileDrawer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+      <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-header">
+          <span class="drawer-title">PORTFOLIO</span>
+          <button class="menu-btn close-btn" id="menuClose" aria-label="Close menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="drawer-nav" aria-label="Mobile">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+      </aside>
 
-        <button class="menu-btn" id="menuOpen" aria-label="Open menu" aria-expanded="false"
-          aria-controls="mobileDrawer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-
-    <div class="drawer-overlay" id="drawerOverlay" hidden></div>
-    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-      <div class="drawer-header">
-        <span class="drawer-title">PORTFOLIO</span>
-        <button class="menu-btn close-btn" id="menuClose" aria-label="Close menu">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav class="drawer-nav" aria-label="Mobile">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </aside>
-
-    <main>
-      <section id="home" class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-heading">
-            <p class="eyebrow">Personal Portfolio</p>
-            <h1>Hi, I’m <span class="accent">Yash</span>.</h1>
-          </div>
-
-          <div class="hero-subhead">
-            <h2>I build websites that are clean, responsive, and easy to use.</h2>
-          </div>
-
-          <div class="hero-visual">
-            <div class="portrait-frame">
-              <img src="me.png" alt="Portrait of Yash Kundu" class="portrait" />
-            </div>
-          </div>
-
-          <div class="hero-body">
-            <p class="lead">
-              A collection of projects, ideas, and things I've created.<br />
-
-              Browse my work, discover what I'm building, and connect through my social platforms.
-
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-secondary" href="#contact">Contact Me</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">About</p>
-            <h3>A little about me</h3>
-          </div>
-
-          <div class="about-panel">
-            <p>
-              Hi, I’m Yash Kundu. I’ve always been interested in technology and enjoy creating things that people can
-              actually use.<br />
-              <br />
-              Recently, I’ve started learning Android development to expand my skills and explore mobile app
-              development. I enjoy
-              learning new technologies, working on different projects, and challenging myself to improve with every
-              project I build.<br />
-              <br />
-              This portfolio is a collection of my work, projects, and ideas. It’s also a place where you can find my
-              social links and
-              follow my journey as I continue learning and creating new things.
-
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section">
-        <div class="container">
-
-          <div class="section-heading">
-            <p class="section-kicker">Skills</p>
-            <h3>Technical Skills</h3>
-          </div>
-          <div class="skills-grid">
-
-            <div class="skill-card">
-              <i class="fa-brands fa-html5"></i>
-              <span>HTML</span>
+      <main>
+        <section id="home" class="hero section">
+          <div class="container hero-grid">
+            <div class="hero-heading">
+              <p class="eyebrow">Personal Portfolio</p>
+              <h1>Hi, I’m <span class="accent">Yash</span>.</h1>
             </div>
 
-            <div class="skill-card">
-              <i class="fa-brands fa-css3-alt"></i>
-              <span>CSS</span>
+            <div class="hero-subhead">
+              <h2>I build websites that are clean, responsive, and easy to use.</h2>
             </div>
 
-            <div class="skill-card">
-              <i class="fa-brands fa-js"></i>
-              <span>JavaScript</span>
+            <div class="hero-visual">
+              <div class="portrait-frame">
+                <img src="me.png" alt="Portrait of Yash Kundu" class="portrait" />
+              </div>
             </div>
 
-            <div class="skill-card">
-              <i class="fa-brands fa-java"></i>
-              <span>Java</span>
-            </div>
+            <div class="hero-body">
+              <p class="lead">
+                A collection of projects, ideas, and things I've created.<br />
 
-            <div class="skill-card">
-              <i class="fa-brands fa-android"></i>
-              <span>Kotlin</span>
-            </div>
+                Browse my work, discover what I'm building, and connect through my social platforms.
 
-            <div class="skill-card">
-              <i class="fa-brands fa-git-alt"></i>
-              <span>Git</span>
-            </div>
+              </p>
 
-            <div class="skill-card">
-              <i class="fa-brands fa-github"></i>
-              <span>GitHub</span>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#projects">View Projects</a>
+                <a class="btn btn-secondary" href="#contact">Contact Me</a>
+              </div>
             </div>
-
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="projects" class="section">
-        <div class="container">
+        <section id="about" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="section-kicker">About</p>
+              <h3>A little about me</h3>
+            </div>
 
-          <div class="section-heading">
-            <p class="section-kicker">Projects</p>
-            <h3>Things I've built</h3>
+            <div class="about-panel">
+              <p>
+                Hi, I’m Yash Kundu. I’ve always been interested in technology and enjoy creating things that people can
+                actually use.<br />
+                <br />
+                Recently, I’ve started learning Android development to expand my skills and explore mobile app
+                development. I enjoy
+                learning new technologies, working on different projects, and challenging myself to improve with every
+                project I build.<br />
+                <br />
+                This portfolio is a collection of my work, projects, and ideas. It’s also a place where you can find my
+                social links and
+                follow my journey as I continue learning and creating new things.
+
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div class="projects-grid">
+        <section id="skills" class="section">
+          <div class="container">
 
-            <article class="project-card">
+            <div class="section-heading">
+              <p class="section-kicker">Skills</p>
+              <h3>Technical Skills</h3>
+            </div>
+            <div class="skills-grid">
 
-              <div class="project-image">
-                <img src="rb.png" alt="Rajni Bhasin Website">
+              <div class="skill-card">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
               </div>
 
-              <div class="project-content">
+              <div class="skill-card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
 
-                <h4>Rajni Bhasin</h4>
+              <div class="skill-card">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+              </div>
 
-                <p>Career Guidance Platform</p>
+              <div class="skill-card">
+                <i class="fa-brands fa-java"></i>
+                <span>Java</span>
+              </div>
 
-                <a href="https://rajnibhasin.in/" target="_blank" rel="noopener noreferrer" class="project-link">
-                  View Project →
+              <div class="skill-card">
+                <i class="fa-brands fa-android"></i>
+                <span>Kotlin</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="section">
+          <div class="container">
+
+            <div class="section-heading">
+              <p class="section-kicker">Projects</p>
+              <h3>Things I've built</h3>
+            </div>
+
+            <div class="projects-grid">
+
+              <article class="project-card">
+
+                <div class="project-image">
+                  <img src="weather.png" alt="Weatherz Weather App">
+                </div>
+
+                <div class="project-content">
+                  <h4>Weatherz</h4>
+                  <p>Real-time weather app with rain animations, 3-day forecast, and AQI tracking.</p>
+                  <a href="https://13yashkundu.github.io/weatherZ-web/" target="_blank" rel="noopener noreferrer"
+                    class="project-link">
+                    View Project →
+                  </a>
+                </div>
+
+              </article>
+
+              <article class="project-card">
+
+                <div class="project-image">
+                  <img src="rb.png" alt="Rajni Bhasin Website">
+                </div>
+
+                <div class="project-content">
+
+                  <h4>Rajni Bhasin</h4>
+
+                  <p>Career Guidance Platform</p>
+
+                  <a href="https://rajnibhasin.in/" target="_blank" rel="noopener noreferrer" class="project-link">
+                    View Project →
+                  </a>
+
+                </div>
+
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="section-kicker">Contact</p>
+              <h3>Reach Out Anytime</h3>
+            </div>
+
+            <div class="contact-panel">
+              <div class="contact-methods">
+                <a href="mailto:yshkundu@gmail.com" class="contact-method">
+                  <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                  <span class="contact-text">
+                    <strong>Email</strong>
+                    <span class="contact-method-value">Send an email →</span>
+                  </span>
                 </a>
 
+                <a href="https://wa.me/+918396033600" target="_blank" rel="noopener noreferrer" class="contact-method">
+                  <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                  <span class="contact-text">
+                    <strong>WhatsApp</strong>
+                    <span class="contact-method-value">Start Chat →</span>
+                  </span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noopener noreferrer"
+                  class="contact-method">
+                  <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
+                  <span class="contact-text">
+                    <strong>LinkedIn</strong>
+                    <span class="contact-method-value">View Profile →</span>
+                  </span>
+                </a>
+
+                <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer"
+                  class="contact-method">
+                  <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+                  <span class="contact-text">
+                    <strong>GitHub</strong>
+                    <span class="contact-method-value">View Profile →</span>
+                  </span>
+                </a>
               </div>
-
-            </article>
-
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-      <section id="contact" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">Contact</p>
-            <h3>Reach Out Anytime</h3>
-          </div>
+      <footer class="footer">
+        <div class="container footer-inner">
 
-          <div class="contact-panel">
-            <div class="contact-methods">
-              <a href="mailto:yshkundu@gmail.com" class="contact-method">
-                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-                <span class="contact-text">
-                  <strong>Email</strong>
-                  <span class="contact-method-value">Send an email →</span>
-                </span>
-              </a>
+          <div class="footer-left">
+            <h3>Yash<span class="accent">Kundu</span></h3>
 
-              <a href="https://wa.me/+918396033600" target="_blank" rel="noopener noreferrer" class="contact-method">
-                <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
-                <span class="contact-text">
-                  <strong>WhatsApp</strong>
-                  <span class="contact-method-value">Start Chat →</span>
-                </span>
+            <p>
+              Building projects, learning new technologies,
+              and sharing my journey through code.
+            </p>
+
+            <div class="footer-socials">
+
+              <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
               </a>
 
               <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noopener noreferrer"
-                class="contact-method">
-                <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
-                <span class="contact-text">
-                  <strong>LinkedIn</strong>
-                  <span class="contact-method-value">View Profile →</span>
-                </span>
+                aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
               </a>
 
-              <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer" class="contact-method">
-                <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
-                <span class="contact-text">
-                  <strong>GitHub</strong>
-                  <span class="contact-method-value">View Profile →</span>
-                </span>
+              <a href="https://www.instagram.com/yshkundu__" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
               </a>
+
+              <a href="https://x.com/yshkundu_" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+
             </div>
           </div>
         </div>
-      </section>
-    </main>
+        <a class="back-top" href="#home" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-
-        <div class="footer-left">
-          <h3>Yash<span class="accent">Kundu</span></h3>
-
-          <p>
-            Building projects, learning new technologies,
-            and sharing my journey through code.
-          </p>
-
-          <div class="footer-socials">
-
-            <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-
-            <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noopener noreferrer"
-              aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-
-            <a href="https://www.instagram.com/yshkundu__" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="https://x.com/yshkundu_" target="_blank" rel="noopener noreferrer" aria-label="X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-
-          </div>
-        </div>
-      </div>
-      <a class="back-top" href="#home" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
-
-    </footer>
+      </footer>
     </div>
   </div>
 

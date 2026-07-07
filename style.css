@@ -28,11 +28,12 @@ body {
   color: var(--text);
 }
 
-.shade{
+.shade {
   height: wrap-content;
   width: 100%;
-background: rgba(0, 0, 0, 0.541);
+  background: rgba(0, 0, 0, 0.541);
 }
+
 .vanta-bg {
   position: fixed;
   inset: 0;
@@ -404,17 +405,13 @@ img {
 }
 
 .skill-card:hover i {
-  color:white;
+  color: white;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
-}
-
-.projects-grid .project-card {
-  max-width: 420px;
 }
 
 .project-card {
