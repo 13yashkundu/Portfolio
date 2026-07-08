@@ -28,11 +28,12 @@ body {
   color: var(--text);
 }
 
-.shade{
+.shade {
   height: wrap-content;
   width: 100%;
-background: rgba(0, 0, 0, 0.541);
+  background: rgba(0, 0, 0, 0.541);
 }
+
 .vanta-bg {
   position: fixed;
   inset: 0;
@@ -383,13 +384,18 @@ img {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 167, 167, 0.15);
   border-radius: 18px;
-  transition: all 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+  will-change: transform;
 }
 
 .skill-card i {
   font-size: 42px;
   color: rgb(255, 167, 167);
   margin-bottom: 12px;
+  transition: color 0.4s ease, filter 0.4s ease;
 }
 
 .skill-card span {
@@ -398,13 +404,18 @@ img {
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px) scale(1.02);
   border-color: rgb(255, 167, 167);
-  box-shadow: 0 0 20px rgba(255, 167, 167, 0.25);
+  background: rgba(255, 167, 167, 0.06);
+  box-shadow:
+    0 0 0 1px rgba(255, 167, 167, 0.25),
+    0 0 24px rgba(255, 167, 167, 0.35),
+    0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .skill-card:hover i {
-  color:white;
+  color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 167, 167, 0.9));
 }
 
 .projects-grid {
@@ -419,13 +430,19 @@ img {
   border-radius: 20px;
   background: rgba(255, 255, 255, .04);
   border: 1px solid rgba(255, 167, 167, .12);
-  transition: .3s ease;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+  will-change: transform;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: rgb(255, 167, 167);
-  box-shadow: 0 10px 30px rgba(255, 167, 167, .15);
+  box-shadow:
+    0 0 0 1px rgba(255, 167, 167, 0.2),
+    0 0 40px rgba(255, 167, 167, 0.25),
+    0 20px 45px rgba(0, 0, 0, .35);
 }
 
 .project-image {
@@ -436,11 +453,11 @@ img {
   width: 100%;
   height: 240px;
   object-fit: cover;
-  transition: .4s;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.03);
+  transform: scale(1.06);
 }
 
 .project-content {
@@ -460,6 +477,11 @@ img {
 .project-link {
   color: rgb(255, 167, 167);
   font-weight: 600;
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+.project-link:hover {
+  filter: drop-shadow(0 0 6px rgba(255, 167, 167, 0.8));
 }
 
 .contact-panel {
@@ -498,13 +520,18 @@ img {
   border: 1px solid rgba(255, 167, 167, 0.15);
   color: var(--text);
   min-width: 0;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 a.contact-method:hover {
   transform: translateY(-4px);
   border-color: rgb(255, 167, 167);
-  box-shadow: 0 10px 24px rgba(255, 167, 167, 0.15);
+  box-shadow:
+    0 0 0 1px rgba(255, 167, 167, 0.2),
+    0 0 22px rgba(255, 167, 167, 0.3),
+    0 10px 24px rgba(255, 167, 167, 0.15);
 }
 
 .contact-text {
@@ -589,7 +616,9 @@ a.contact-method:hover {
 
   border: 1px solid rgba(255, 167, 167, .15);
 
-  transition: .3s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .footer-socials a:hover {
@@ -597,7 +626,7 @@ a.contact-method:hover {
 
   border-color: var(--accent);
 
-  box-shadow: 0 0 20px rgba(255, 167, 167, .18);
+  box-shadow: 0 0 20px rgba(255, 167, 167, .35);
 }
 
 .footer-socials i {
@@ -640,14 +669,14 @@ a.contact-method:hover {
 
   color: var(--accent);
 
-  transition: .3s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
 }
 
 .back-top:hover {
   transform: translateY(-4px);
 
   box-shadow:
-    0 0 20px rgba(255, 167, 167, .18);
+    0 0 20px rgba(255, 167, 167, .35);
 }
 
 /* ============ Responsive ============ */
