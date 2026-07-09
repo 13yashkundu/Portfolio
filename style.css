@@ -368,11 +368,25 @@ img {
   font-size: 1.02rem;
 }
 
+.skills-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skill-group-label {
+  margin: 0 0 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 20px;
-  justify-content: center;
 }
 
 .skill-card {
@@ -392,14 +406,16 @@ img {
 }
 
 .skill-card i {
-  font-size: 42px;
+  font-size: 38px;
   color: rgb(255, 167, 167);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   transition: color 0.4s ease, filter 0.4s ease;
 }
 
 .skill-card span {
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   color: white;
 }
 
