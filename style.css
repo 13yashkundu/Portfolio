@@ -110,6 +110,7 @@ img {
 }
 
 .desktop-nav a {
+  position: relative;
   color: var(--muted);
   font-size: 0.98rem;
   transition: color 0.2s ease, transform 0.2s ease;
@@ -118,6 +119,21 @@ img {
 .desktop-nav a:hover {
   color: var(--accent);
   transform: translateY(-1px);
+}
+
+.desktop-nav a.active {
+  color: var(--accent);
+}
+
+.desktop-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
 }
 
 .menu-btn {
@@ -215,6 +231,13 @@ img {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.drawer-nav a.active {
+  background: rgba(255, 167, 167, 0.1);
+  border-color: rgba(255, 167, 167, 0.35);
+  color: var(--accent);
 }
 
 /* ============ Hero ============ */
