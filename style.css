@@ -704,6 +704,7 @@ a.contact-method:hover {
 .footer {
   margin-top: 60px;
   padding-top: 30px;
+  padding-bottom: 90px;
 
   border-top: 1px solid rgba(255, 255, 255, .08);
 
@@ -714,9 +715,10 @@ a.contact-method:hover {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
 }
 
 .footer-left h3 {
@@ -725,7 +727,7 @@ a.contact-method:hover {
 }
 
 .footer-left p {
-  margin: 12px 0 20px;
+  margin: 0 auto 4px;
   max-width: 450px;
 
   color: var(--muted);
@@ -734,6 +736,7 @@ a.contact-method:hover {
 
 .footer-socials {
   display: flex;
+  justify-content: center;
   gap: 14px;
 }
 
@@ -786,8 +789,8 @@ a.contact-method:hover {
 .back-top {
   position: absolute;
 
-  right: 40px;
-  bottom: 95px;
+  right: 24px;
+  bottom: 24px;
 
   width: 52px;
   height: 52px;
@@ -963,10 +966,5 @@ a.contact-method:hover {
 
   .project-content {
     padding: 18px;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
