@@ -28,7 +28,6 @@ Open `index.html` in a browser to view the site locally or deploy to GitHub Page
 
 2. Open `index.html` in your browser.
 
-No build steps are required.
 
 ## Screenshots (SS)
 
