@@ -93,12 +93,12 @@
 
         <section id="about" class="section">
           <div class="container">
-            <div class="section-heading">
+            <div class="section-heading reveal">
               <p class="section-kicker">About</p>
               <h3>A little about me</h3>
             </div>
 
-            <div class="about-panel">
+            <div class="about-panel reveal">
               <p>
                 I’m Yash Kundu, a web developer who enjoys building things people actually use. I’m currently
                 learning Android development to grow into mobile app development, and I like picking up new
@@ -115,7 +115,7 @@
         <section id="skills" class="section">
           <div class="container">
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
               <p class="section-kicker">Skills</p>
               <h3>Technical Skills</h3>
             </div>
@@ -124,7 +124,7 @@
 
               <div class="skill-group">
                 <p class="skill-group-label">Languages & Web</p>
-                <div class="skills-grid">
+                <div class="skills-grid reveal-stagger">
 
                   <div class="skill-card">
                     <i class="fa-brands fa-html5"></i>
@@ -156,7 +156,7 @@
 
               <div class="skill-group">
                 <p class="skill-group-label">Tools & Workflow</p>
-                <div class="skills-grid">
+                <div class="skills-grid reveal-stagger">
 
                   <div class="skill-card">
                     <i class="fa-brands fa-git-alt"></i>
@@ -178,12 +178,12 @@
         <section id="projects" class="section">
           <div class="container">
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
               <p class="section-kicker">Projects</p>
               <h3>Things I've built</h3>
             </div>
 
-            <div class="projects-grid">
+            <div class="projects-grid reveal-stagger">
 
               <article class="project-card">
 
@@ -258,14 +258,14 @@
 
         <section id="contact" class="section">
           <div class="container">
-            <div class="section-heading">
+            <div class="section-heading reveal">
               <p class="section-kicker">Contact</p>
               <h3>Reach Out Anytime</h3>
             </div>
 
-            <div class="contact-panel">
+            <div class="contact-panel reveal">
               <p class="contact-lead">Have a project in mind or just want to connect? Pick whichever works for you.</p>
-              <div class="contact-methods">
+              <div class="contact-methods reveal-stagger">
                 <a href="mailto:yshkundu@gmail.com" class="contact-method">
                   <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
                   <span class="contact-text">
@@ -404,6 +404,34 @@
       );
 
       sections.forEach((section) => observer.observe(section));
+    })();
+  </script>
+
+  <script>
+    // Scroll-entrance animations for sections and cards
+    (function () {
+      const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+      if (!revealEls.length) return;
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+      );
+
+      revealEls.forEach((el) => revealObserver.observe(el));
     })();
   </script>
 </body>
