@@ -4,35 +4,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <title>Portfolio | Yash Kundu</title>
-  <meta name="description" content="Responsive portfolio website for Yash Kundu, a web developer." />
+  <title>Yash Kundu | Web Developer & Android Learner</title>
+  <meta name="description"
+    content="Portfolio of Yash Kundu — a web developer building clean, responsive websites and expanding into Kotlin & Android development." />
+  <meta name="theme-color" content="#09090d" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="shade">
-    <div class="vanta-bg s-section"></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="vanta-bg s-section" aria-hidden="true"></div>
+
+  <div class="shade">
     <div class="page-shell">
-      <header class="topbar">
+      <header class="topbar" id="topbar">
         <div class="container topbar-inner">
-          <a class="brand" href="#home" aria-label="Go to home">
-            <span class="brand-mark">Yash Kundu</span>
+          <a class="brand" href="#home" aria-label="Yash Kundu — Go to top">
+            <span class="brand-dot" aria-hidden="true"></span>
+            <span class="brand-mark">Yash <span class="accent">Kundu</span></span>
           </a>
 
           <nav class="desktop-nav" aria-label="Primary">
-            <a href="#home">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </nav>
 
-          <button class="menu-btn" id="menuOpen" aria-label="Open menu" aria-expanded="false"
+          <button class="menu-btn" id="menuOpen" type="button" aria-label="Open menu" aria-expanded="false"
             aria-controls="mobileDrawer">
             <span></span>
             <span></span>
@@ -42,27 +49,38 @@
       </header>
 
       <div class="drawer-overlay" id="drawerOverlay" hidden></div>
-      <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true" aria-label="Mobile navigation">
         <div class="drawer-header">
-          <span class="drawer-title">PORTFOLIO</span>
-          <button class="menu-btn close-btn" id="menuClose" aria-label="Close menu">
+          <span class="drawer-title">NAVIGATION</span>
+          <button class="menu-btn close-btn" id="menuClose" type="button" aria-label="Close menu">
             <span></span>
             <span></span>
           </button>
         </div>
         <nav class="drawer-nav" aria-label="Mobile">
-          <a href="#home">Home</a>
+          <a href="#home" class="active">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <div class="drawer-footer">
+          <a href="mailto:yshkundu@gmail.com" class="drawer-email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            yshkundu@gmail.com
+          </a>
+        </div>
       </aside>
 
-      <main>
+      <main id="main-content">
+        <!-- Hero -->
         <section id="home" class="hero section">
           <div class="container hero-grid">
             <div class="hero-heading">
+              <div class="status-pill">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Open to Web &amp; Android Collaborations</span>
+              </div>
               <p class="eyebrow">Web Developer · Android Learner</p>
               <h1>Hi, I’m <span class="accent">Yash</span>.</h1>
             </div>
@@ -72,25 +90,30 @@
             </div>
 
             <div class="hero-visual">
+              <div class="portrait-glow" aria-hidden="true"></div>
               <div class="portrait-frame">
-                <img src="me.png" alt="Portrait of Yash Kundu" class="portrait" />
+                <img src="me.png" alt="Portrait of Yash Kundu" class="portrait" loading="eager" decoding="async" />
               </div>
             </div>
 
             <div class="hero-body">
               <p class="lead">
-                I design and build clean and user friendly websites. <br />
-                Currently working on my skills in Kotlin and Android to extend that work into native mobile apps.
+                I design and build clean, fast, and user-friendly websites. Currently sharpening my skills in Kotlin
+                and Android to bring that same craft to native mobile experiences.
               </p>
 
               <div class="hero-actions">
-                <a class="btn btn-primary" href="#projects">View Projects</a>
-                <a class="btn btn-secondary" href="#contact">Let's connect</a>
+                <a class="btn btn-primary" href="#projects">
+                  <span>View Projects</span>
+                  <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-secondary" href="#contact">Let's Connect</a>
               </div>
             </div>
           </div>
         </section>
 
+        <!-- About -->
         <section id="about" class="section">
           <div class="container">
             <div class="section-heading reveal">
@@ -100,100 +123,113 @@
 
             <div class="about-panel reveal">
               <p>
-                I'm Yash Kundu, a web developer passionate about building clean, responsive, and user-friendly websites.
-                </p>
-                <p>
-                I'm currently expanding my skills into Android development with Kotlin while continuously improving my frontend development skills through real-world projects.
+                I'm <strong>Yash Kundu</strong>, a web developer passionate about crafting clean, responsive, and
+                intuitive interfaces that work seamlessly across devices.
               </p>
+              <p>
+                Right now, I'm expanding into native Android development with <strong>Kotlin</strong> while continuing
+                to refine my frontend engineering skills through real-world client and personal projects.
+              </p>
+
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <i class="fa-solid fa-code" aria-hidden="true"></i>
+                  <div>
+                    <strong>Frontend Craft</strong>
+                    <span>Responsive layouts, accessibility, and clean UI details.</span>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-brands fa-android" aria-hidden="true"></i>
+                  <div>
+                    <strong>Mobile Growth</strong>
+                    <span>Learning Kotlin &amp; Android fundamentals for native apps.</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
+        <!-- Skills -->
         <section id="skills" class="section">
           <div class="container">
-
             <div class="section-heading reveal">
               <p class="section-kicker">Skills</p>
               <h3>Technical Skills</h3>
             </div>
 
             <div class="skills-groups">
-
               <div class="skill-group">
-                <p class="skill-group-label">Languages</p>
+                <p class="skill-group-label">Languages &amp; Core</p>
                 <div class="skills-grid reveal-stagger">
-
                   <div class="skill-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <span>HTML</span>
+                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                    <span>HTML5</span>
                   </div>
-
                   <div class="skill-card">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <span>CSS</span>
+                    <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                    <span>CSS3</span>
                   </div>
-
                   <div class="skill-card">
-                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-js" aria-hidden="true"></i>
                     <span>JavaScript</span>
                   </div>
-
                   <div class="skill-card">
-                    <i class="fa-brands fa-java"></i>
+                    <i class="fa-brands fa-java" aria-hidden="true"></i>
                     <span>Java</span>
                   </div>
-
                   <div class="skill-card">
-                    <i class="fa-brands fa-android"></i>
+                    <i class="fa-brands fa-android" aria-hidden="true"></i>
                     <span>Kotlin</span>
                   </div>
-
                 </div>
               </div>
 
               <div class="skill-group">
-                <p class="skill-group-label">Tools</p>
+                <p class="skill-group-label">Tools &amp; Workflow</p>
                 <div class="skills-grid reveal-stagger">
-
                   <div class="skill-card">
-                    <i class="fa-brands fa-git-alt"></i>
+                    <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
                     <span>Git</span>
                   </div>
-
                   <div class="skill-card">
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     <span>GitHub</span>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
+        <!-- Projects -->
         <section id="projects" class="section">
           <div class="container">
-
             <div class="section-heading reveal">
               <p class="section-kicker">Projects</p>
-              <h3>Some of my Projects</h3>
+              <h3>Selected Work</h3>
             </div>
 
             <div class="projects-grid reveal-stagger">
-
-              <article class="project-card">
-
-                <div class="project-image">
-                  <img src="weather.png" alt="Weatherz Weather App">
-                  <div class="project-overlay">
-                    <span class="project-overlay-text">Explore Project <i class="fa-solid fa-arrow-right"></i></span>
+              <!-- Project 1 -->
+              <article class="project-card" data-project="weatherz">
+                <button type="button" class="project-image-trigger" data-open-project="weatherz"
+                  aria-label="Inspect Weatherz project details">
+                  <div class="project-image">
+                    <img src="weather.png" alt="Weatherz Weather App interface" loading="lazy" decoding="async" />
+                    <span class="project-tag">Web App</span>
+                    <div class="project-overlay">
+                      <span class="project-overlay-text">
+                        View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </button>
 
                 <div class="project-content">
                   <h4>Weatherz</h4>
-                  <p>Real-time weather app with rain animations, 3-day forecast, and AQI tracking.</p>
+                  <p>Real-time weather app featuring dynamic rain animations, a 3-day forecast, and AQI tracking.</p>
 
                   <div class="tech-stack">
                     <span class="tech-badge">HTML</span>
@@ -204,30 +240,39 @@
                   <div class="project-actions">
                     <a href="https://13yashkundu.github.io/weatherZ-web/" target="_blank" rel="noopener noreferrer"
                       class="project-btn project-btn-primary">
-                      <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                      <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
                     </a>
                     <a href="https://github.com/13yashkundu/weatherZ-web" target="_blank" rel="noopener noreferrer"
                       class="project-btn project-btn-secondary">
-                      <i class="fa-brands fa-github"></i> GitHub
+                      <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
                     </a>
+                    <button type="button" class="project-btn project-btn-ghost" data-open-project="weatherz">
+                      <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Details
+                    </button>
                   </div>
                 </div>
-
               </article>
 
-              <article class="project-card">
-
-                <div class="project-image">
-                  <img src="rb.png" alt="Rajni Bhasin Website">
-                  <div class="project-overlay">
-                    <span class="project-overlay-text">Explore Project <i class="fa-solid fa-arrow-right"></i></span>
+              <!-- Project 2 -->
+              <article class="project-card" data-project="rajnibhasin">
+                <button type="button" class="project-image-trigger" data-open-project="rajnibhasin"
+                  aria-label="Inspect Rajni Bhasin project details">
+                  <div class="project-image">
+                    <img src="rb.png" alt="Rajni Bhasin Career Guidance Platform interface" loading="lazy"
+                      decoding="async" />
+                    <span class="project-tag">Client Project</span>
+                    <div class="project-overlay">
+                      <span class="project-overlay-text">
+                        View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </button>
 
                 <div class="project-content">
-
                   <h4>Rajni Bhasin</h4>
-                  <p>Career Guidance Platform</p>
+                  <p>Responsive web platform designed and built for a career guidance mentor and counseling practice.
+                  </p>
 
                   <div class="tech-stack">
                     <span class="tech-badge">HTML</span>
@@ -238,19 +283,19 @@
                   <div class="project-actions">
                     <a href="https://rajnibhasin.in/" target="_blank" rel="noopener noreferrer"
                       class="project-btn project-btn-primary">
-                      <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                      <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Site
                     </a>
-
+                    <button type="button" class="project-btn project-btn-ghost" data-open-project="rajnibhasin">
+                      <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Details
+                    </button>
                   </div>
-
                 </div>
-
               </article>
-
             </div>
           </div>
         </section>
 
+        <!-- Contact -->
         <section id="contact" class="section">
           <div class="container">
             <div class="section-heading reveal">
@@ -259,41 +304,99 @@
             </div>
 
             <div class="contact-panel reveal">
-             <!--  <p class="contact-lead">Have a project in mind or just want to connect? Pick whichever works for you.</p> -->
-              <div class="contact-methods reveal-stagger">
-                <a href="mailto:yshkundu@gmail.com" class="contact-method">
-                  <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-                  <span class="contact-text">
-                    <strong>Email</strong>
-                    <span class="contact-method-value">Send an email →</span>
-                  </span>
-                </a>
+              <div class="contact-grid">
+                <!-- Left: Direct channels -->
+                <div class="contact-info">
+                  <h4>Reach out directly</h4>
+                  <p class="contact-lead">
+                    Have a project idea, collaboration, or opportunity in mind? Pick whichever channel works best for
+                    you.
+                  </p>
 
-                <a href="https://wa.me/+918396033600" target="_blank" rel="noopener noreferrer" class="contact-method">
-                  <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
-                  <span class="contact-text">
-                    <strong>WhatsApp</strong>
-                    <span class="contact-method-value">Start Chat →</span>
-                  </span>
-                </a>
+                  <div class="email-copy-box">
+                    <div class="email-copy-meta">
+                      <span class="email-label">Direct Email</span>
+                      <a href="mailto:yshkundu@gmail.com" class="email-address">yshkundu@gmail.com</a>
+                    </div>
+                    <button type="button" class="copy-btn" id="copyEmailBtn" data-copy="yshkundu@gmail.com"
+                      aria-label="Copy email address yshkundu@gmail.com">
+                      <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                      <span>Copy</span>
+                    </button>
+                  </div>
 
-                <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noopener noreferrer"
-                  class="contact-method">
-                  <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
-                  <span class="contact-text">
-                    <strong>LinkedIn</strong>
-                    <span class="contact-method-value">View Profile →</span>
-                  </span>
-                </a>
+                  <div class="contact-methods">
+                    <a href="https://wa.me/918396033600" target="_blank" rel="noopener noreferrer"
+                      class="contact-method">
+                      <span class="contact-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+                      <span class="contact-text">
+                        <strong>WhatsApp</strong>
+                        <span class="contact-method-value">Start chat &rarr;</span>
+                      </span>
+                    </a>
 
-                <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer"
-                  class="contact-method">
-                  <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
-                  <span class="contact-text">
-                    <strong>GitHub</strong>
-                    <span class="contact-method-value">View Profile →</span>
-                  </span>
-                </a>
+                    <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noopener noreferrer"
+                      class="contact-method">
+                      <span class="contact-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></span>
+                      <span class="contact-text">
+                        <strong>LinkedIn</strong>
+                        <span class="contact-method-value">Connect &rarr;</span>
+                      </span>
+                    </a>
+
+                    <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer"
+                      class="contact-method">
+                      <span class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                      <span class="contact-text">
+                        <strong>GitHub</strong>
+                        <span class="contact-method-value">View repos &rarr;</span>
+                      </span>
+                    </a>
+
+                    <a href="mailto:yshkundu@gmail.com" class="contact-method">
+                      <span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                      <span class="contact-text">
+                        <strong>Mail App</strong>
+                        <span class="contact-method-value">Open client &rarr;</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Right: Quick Message Composer -->
+                <form class="contact-form" id="contactForm" novalidate>
+                  <h4>Send a quick message</h4>
+
+                  <div class="form-field">
+                    <label for="senderName">Your Name</label>
+                    <input type="text" id="senderName" name="name" placeholder="e.g. Alex" required
+                      autocomplete="name" />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="senderEmail">Your Email</label>
+                    <input type="email" id="senderEmail" name="email" placeholder="you@example.com" required
+                      autocomplete="email" />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="senderMessage">Message</label>
+                    <textarea id="senderMessage" name="message" rows="4"
+                      placeholder="Tell me a little about what you're building..." required></textarea>
+                  </div>
+
+                  <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                      <span>Draft Email</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="copyMessageBtn">
+                      <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                      <span>Copy Message</span>
+                    </button>
+                  </div>
+                  <p class="form-hint" id="formHint" aria-live="polite"></p>
+                </form>
               </div>
             </div>
           </div>
@@ -302,132 +405,67 @@
 
       <footer class="footer">
         <div class="container footer-inner">
-
           <div class="footer-left">
             <h3>Yash<span class="accent">Kundu</span></h3>
-
-            <p>
-              Building projects, learning new technologies.
-            </p>
+            <p>Building clean web experiences &amp; learning native Android development.</p>
 
             <div class="footer-socials">
-
               <a href="https://github.com/13yashkundu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
               </a>
-
               <a href="https://www.linkedin.com/in/yash-kundu-476389343" target="_blank" rel="noopener noreferrer"
                 aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
               </a>
-
               <a href="https://www.instagram.com/yshkundu___" target="_blank" rel="noopener noreferrer"
                 aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
-
               <a href="https://x.com/yshkundu_" target="_blank" rel="noopener noreferrer" aria-label="X">
-                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
               </a>
-
             </div>
           </div>
         </div>
 
         <div class="container footer-bottom">
-          <p>© <span id="year"></span> Yash Kundu</p>
+          <p>&copy; <span id="year"></span> Yash Kundu. Crafted with care.</p>
         </div>
-
-        <a class="back-top" href="#home" aria-label="Back to top">
-          <i class="fa-solid fa-arrow-up"></i>
-        </a>
-
       </footer>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-  <script>
-    var setVanta = () => {
-      if (window.VANTA) window.VANTA.NET({
-        el: ".s-section",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: true,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xc5a4a4,
-        backgroundColor: 0xe0e0e,
-        points: 8.00,
-        maxDistance: 22.00,
-        spacing: 17.00
-      })
-    }
-    setVanta();
-  </script>
+  <!-- Floating Back to Top -->
+  <a class="back-top" id="backToTop" href="#home" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
 
-  <script src="script.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Project Details Modal -->
+  <div class="modal-backdrop" id="projectModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close project details">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-media">
+        <img id="modalImg" src="" alt="" />
+        <span class="project-tag" id="modalTag"></span>
+      </div>
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc" class="modal-desc"></p>
+        <ul id="modalHighlights" class="modal-highlights"></ul>
+        <div id="modalTech" class="tech-stack"></div>
+        <div id="modalActions" class="project-actions"></div>
+      </div>
+    </div>
+  </div>
 
-  <script>
-    // Active nav highlighting based on scroll position
-    (function () {
-      const sections = document.querySelectorAll('main section[id]');
-      const navLinks = document.querySelectorAll('.desktop-nav a, .drawer-nav a');
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
-      const setActive = (id) => {
-        navLinks.forEach((link) => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-        });
-      };
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActive(entry.target.id);
-            }
-          });
-        },
-        { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
-      );
-
-      sections.forEach((section) => observer.observe(section));
-    })();
-  </script>
-
-  <script>
-    // Scroll-entrance animations for sections and cards
-    (function () {
-      const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
-      if (!revealEls.length) return;
-
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReducedMotion) {
-        revealEls.forEach((el) => el.classList.add('is-visible'));
-        return;
-      }
-
-      const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
-      );
-
-      revealEls.forEach((el) => revealObserver.observe(el));
-    })();
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
